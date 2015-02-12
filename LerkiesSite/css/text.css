@@ -1,0 +1,144 @@
+/*************************************/
+/* Inladen van de correcte fonts     */
+/*************************************/
+@font-face {
+    font-family: 'Copperplate';
+    src: url('font/copperplate-webfont.eot');
+    src: url('font/copperplate-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/copperplate-webfont.woff') format('woff'),
+         url('font/copperplate-webfont.ttf') format('truetype'),
+         url('font/copperplate-webfont.svg#CopperplateGothicBoldRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*************************************/
+/* Tekstopmaak									     */
+/*************************************/
+html a{
+		color: #5a200b;
+}
+#header-menu ul {
+	font-family: 'Copperplate';
+	color: white;
+}
+#header-menu ul li a {
+	color: #fdfae1;
+	text-decoration: none;
+	font-size: 22px;
+}
+#menu h1 {
+		font-family: 'Copperplate';
+		color: #fff8ed;
+}
+.text {
+		font-family: 'Arial';
+		color: #1b1206;
+		font-size: 16px;
+		line-height: 30px;
+		margin-left: 60px;
+		margin-right: 60px;
+}
+.text h1 {
+		font-family: 'Copperplate';
+		font-size: 30px;
+		padding-bottom: 20px;
+}
+.text h2 {
+		font-family: 'Copperplate';
+		font-size: 25px;
+		color: #5a200b;
+}
+.text h1:first-letter {
+		color: #5a200b;
+		font-size: 125%;
+}
+.text a {
+		color: #5a200b;
+}
+.text th {
+		color: white;
+		background-color: #b3a184;
+		padding: 10px;
+}
+.text table {
+		width: 100%;
+}
+.text textarea {
+		width: 99%;
+		background-color: white;
+		border: solid 2px #1b1206;
+}
+.text .menu {
+		position: relative;
+		left: 30px;
+}
+.text input[type=text] {
+		width: 99%;
+		background-color: white;
+		border: solid 2px #1b1206;
+}
+.text ul, li {
+		list-style-type: disc;
+}
+.text ul ul li {
+		list-style-type: circle;
+}
+.menu-links {
+		font-family: 'Copperplate';
+		line-height: 40px;
+}
+.menu-links a {
+		color: #1b1206;
+		font-size: 20px;
+		text-decoration: none;
+}
+.breadcrumb {
+		color: #5a200b;
+}
+.breadcrumb a{
+		color: #5a200b;
+		font-size: 18px;
+}
+.form-item {
+		font-family: 'Copperplate';
+		color: #1b1206;
+		font-size: 18px;
+}
+.form-required {
+		color: #5a200b;
+}
+.form-text {
+		width: 200px;
+		border: 2px solid #1b1206;
+}
+#user-login-form .item-list a{
+		color: #1b1206;
+}
+.now-logged-in {
+		font-family: 'Copperplate';
+		font-size: 16px;
+		color: #1b1206;
+}
+#block-system-navigation ul li a{
+		font-family: 'Copperplate';
+		font-size: 20px;
+		line-height: 40px;
+		color: #1b1206;
+		text-decoration: none;
+}
+#block-system-navigation ul a.active {
+		color: #5a200b;
+		font-weight: bold;
+}
+#block-system-navigation ul li ul li a {
+		font-family: 'Arial';
+		color: #1b1206;
+		font-size: 18px;
+}
+#block-system-navigation ul li ul li ul li a {
+		font-family: 'Arial';
+		font-size: 16px;
+		font-style: italic;
+}

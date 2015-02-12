@@ -1,0 +1,509 @@
+/*************************************/
+/* Inladen van de correcte fonts     */
+/*************************************/
+@font-face {
+    font-family: 'Copperplate';
+    src: url('font/copperplate-webfont.eot');
+    src: url('font/copperplate-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/copperplate-webfont.woff') format('woff'),
+         url('font/copperplate-webfont.ttf') format('truetype'),
+         url('font/copperplate-webfont.svg#CopperplateGothicBoldRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+html, body {
+	height:100%;
+    background: url('img/ground-texture.jpg');
+}
+
+body {
+    margin:0 0;
+    padding:0 0;
+}
+
+html a{
+		color: #5a200b;
+}
+/*************************************/
+/* Float bug fix (niet wijzigen)     */
+/*************************************/
+body:before {
+    content:"";
+    height:100%;
+    float:left;
+    width:0;
+    margin-top:-32767px;
+}
+#wrapper:after,  
+#inner:after { 
+    clear:both;
+    content:"";
+    display:block;
+    height:1%;
+    font-size:0;
+}
+
+/*************************************/
+/* Begin templatestructuur			     */
+/*************************************/
+#wrapper {
+    width: 100%;
+    min-height:100%;/*height is determined from parent's height (html & body)*/ 
+    margin:0 auto;  
+    position:relative; /*establish containing block for AP #faux div*/
+}
+#header{
+    height:270px;
+    background:url('img/horizontal-fade.png');
+    font-weight:bold;
+    position:relative;/*establish stacking order for z-index*/
+    z-index:2;/*layer it above the #faux column*/
+}
+#header-menu {
+	  width: 980px;
+	  height: 270px;
+	  margin: auto;
+      font-family: 'Copperplate';
+      color: white;
+}
+#content {
+		position: relative;
+		float: right;
+		left: -20px;
+		width: 680px;
+}
+#logo {
+		position: relative;
+		left: -100px;
+		top: -200px;
+		width: 600px;
+		height: 600px;
+}
+#header-menu ul {
+	  position: relative;
+	  top: -545px;
+	  left: 300px;
+	  width: 650px;
+	  height: 100px;
+	  text-align: center;
+	  padding-left: 0px;
+}
+#header-menu ul li{
+		padding-left: 10px;
+		padding-right: 10px;
+		display: inline-block;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		white-space: nowrap;
+}
+
+#header-menu ul li a{
+	color: #fdfae1;
+	text-decoration: none;
+	font-size: 22px;
+}
+
+#inner {
+    width:100%;/*haslayout*/
+    padding-bottom:300px; /*preserve footer space (plus 10px for text spacing)*/
+}
+#left{
+    float:left;
+    width:180px;
+    position:relative;
+    z-index:2;/*layer it above the #faux-lt column*/
+}
+#right{
+    float:right;
+    width:180px;         
+    position:relative;
+    z-index:2;/*layer it above the #faux-rt column*/
+}
+#main{
+		position: relative;
+		width: 980px;
+		margin: auto;
+    overflow:hidden;/*stop content from sliding under floated side columns(IE7 haslayout also)*/
+    z-index: 10;
+}
+#footer {
+    width: 100%;
+    position:relative;/*establish stacking order for z-index*/
+    z-index:2;/*layer it above the #faux column*/
+    height:270px;
+    margin:-270px auto 0;/*pull footer back into viewport with negative top margin*/
+    background: url('img/horizontal-fade.png') 0 -270px;
+}
+#menu {
+		float: left;
+		z-index: 10;
+		width: 300px;
+}
+
+#menu h1 {
+		font-family: 'Copperplate';
+		color: #fff8ed;
+}
+
+#menu-title {
+		position:relative;
+		top: -75px;
+		left: -20px;
+		margin-bottom: -100px;
+}
+#menu-title2 {
+		position: relative;
+		left: -20px;
+		top: -30px;
+}
+#menu h1#menuh1{
+		position: absolute;
+		left: 50px;
+		top: -30px;
+		z-index: 2;
+}
+#menu h1#loginh1{
+		position: relative;
+		left: 50px;
+		top: -140px;
+		z-index: 2;
+}
+#container {
+		position: relative;
+		left: 0px;
+		width: 980px;
+		z-index: 20;
+		overflow: hidden;
+		background-position: 275px 0px;
+		background-repeat: repeat-y;
+		background-image: url('img/content.png');
+}
+
+#Schild_Lerkeveld {
+		position: relative;
+		left: 167px;
+		top: 70px;
+}
+
+#Praesidium-picture{
+        position: relative;
+        margin-left: 2px;
+        width:500px;
+}
+
+#top-content {
+		position: relative;
+		top: -534px;
+		margin: auto;
+		width: 980px;
+		height:75px;
+}
+#top-shadow {
+		position: absolute;
+		left: 350px;
+		width: 542px;
+		height: 75px;
+		background-image: url('img/horizontal-shadow.png');
+}
+#top-left-corner {
+		position: absolute;
+		left: 275px;
+		clip:rect(0px,75px,75px,0px);
+		z-index: 2;
+}
+#top-right-corner {
+		position: absolute;
+		right: 15px;
+		clip:rect(0px,150px,75px,75px);
+		z-index: 2;
+}
+#bottom-content {
+		position:relative;
+		float: right;
+		margin: 0 0;
+		left: 0px;
+		height: 75px;
+		width: 980px;
+		z-index:20;
+}
+
+#bottom-left-corner {
+		position: absolute;
+		top: -75px;
+		left: 275px;
+		clip:rect(75px,75px,150px,0px);
+		z-index: 3;
+}
+#bottom-right-corner {
+		position: absolute;
+		top: -75px;
+		right: 15px;
+		clip:rect(75px,150px,150px,75px);
+		z-index: 3;
+}
+#bottom-shadow {
+		position: absolute;
+		width: 542px;
+		height: 75px;
+		left: 350px;
+		background: url('img/horizontal-shadow.png') 0 75px;
+}
+
+.text {
+		font-family: 'Arial';
+		color: #1b1206;
+		font-size: 16px;
+		line-height: 30px;
+		margin-left: 60px;
+		margin-right: 60px;
+}
+.text h1 {
+		font-family: 'Copperplate';
+		font-size: 30px;
+		padding-bottom: 20px;
+}
+.text h2 {
+		font-family: 'Copperplate';
+		font-size: 25px;
+		color: #5a200b;
+}
+.text h1:first-letter {
+		color: #5a200b;
+		font-size: 125%;
+}
+.text a {
+		color: #5a200b;
+}
+.text th {
+		color: white;
+		background-color: #b3a184;
+		padding: 10px;
+        text-align: left;
+}
+
+.text td {
+        padding: 5px;
+}
+.text table {
+		width: 100%;
+}
+.text textarea {
+		width: 99%;
+		background-color: white;
+		border: solid 2px #1b1206;
+}
+.text .menu {
+		position: relative;
+		left: 30px;
+}
+.text input[type=text] {
+		width: 99%;
+		background-color: white;
+		border: solid 2px #1b1206;
+}
+.text ul li {
+		list-style-type: disc;
+        font-size: 16px;
+}
+.text ul ul li {
+		list-style-type: circle;
+        font-size: 16px;
+}
+
+#menu-text {
+		position: relative;
+		top: 50px;
+		background-image:url('img/menu-content.png');
+		padding-bottom: -50px;
+}
+.menu-links {
+		position: relative;
+		padding-left: 30px;
+        font-family: 'Copperplate';
+		line-height: 40px;
+}
+.menu-links ul, li {
+		list-style-type: none;
+        color: #1b1206;
+		font-size: 22px;
+		text-decoration: none;
+}
+
+.menu-links a {
+		color: #1b1206;
+		font-size: 20px;
+		text-decoration: none;
+}
+
+.menu-links ul ul a {
+		font-family: 'Arial';
+        padding-left: 0px;
+        color: #1b1206;
+		font-size: 20px;
+		text-decoration: none;
+}
+
+.menu-links ul ul ul a {
+		font-family: 'Arial';
+        padding-left: 0px;
+        color: #1b1206;
+		font-size: 18px;
+		text-decoration: none;
+}
+
+#menu-bottom {
+		position: relative;
+		top: 25px;
+		left: 95px;
+		width: 205px;
+		height: 75px;
+		background: url('img/horizontal-shadow.png') 0 75px;
+}
+#menu-bottom-shadow {
+		position: relative;
+		left: 180px;		
+}
+#menu-bottom-corner {
+		position: absolute;
+		left: -75px;
+		top: -75px;
+		clip:rect(75px,75px,150px,0px);
+		z-index: 3;
+}
+.breadcrumb {
+		position: absolute;
+		top: 50px;
+		right: 60px;
+        color: #5a200b;
+}
+
+.breadcrumb a{
+		color: #5a200b;
+		font-size: 18px;
+}
+
+.form-item {
+		font-family: 'Copperplate';
+		color: #1b1206;
+		font-size: 18px;
+}
+.form-required {
+		color: #5a200b;
+}
+.form-text {
+		width: 200px;
+		border: 2px solid #1b1206;
+}
+
+.region-sidebar-second {
+		position: relative;
+		top: -100px;
+		left: 60px;
+		width: 210px;
+}
+
+.now-logged-in {
+		font-family: 'Copperplate';
+		font-size: 16px;
+		color: #1b1206;
+}
+
+input[type=submit] {
+		color: white;
+		background-color: #5a200b;
+		border: 0px;
+		font-family: 'Copperplate';
+		padding: 10px;
+}
+#user-login-form #edit-submit {
+		position: relative;
+		top: -60px;
+}
+#user-login-form .item-list {
+		position: relative;
+		top: 30px;
+		left: -20px;
+}
+
+#user-login-form .item-list a{
+		color: #1b1206;
+}
+
+#footer {
+		text-align: center;
+}
+.region-sidebar-first {
+		position: relative;
+		left: 60px;
+		top: 10px;
+		z-index: 10;
+}	
+#block-system-navigation ul {
+		position: relative;
+		left: -40px;
+}
+#block-system-navigation ul.menu li{
+		list-style-image: none;
+		list-style-type: none;
+}
+#block-system-navigation ul li ul li ul li{
+		width: 180px;
+		padding-left: 10px;
+}
+
+#block-system-navigation ul li a{
+		font-family: 'Copperplate';
+		font-size: 20px;
+		line-height: 40px;
+		color: #1b1206;
+		text-decoration: none;
+}
+#block-system-navigation ul a.active {
+		color: #5a200b;
+		font-weight: bold;
+}
+#block-system-navigation ul li ul li a {
+		font-family: 'Arial';
+		color: #1b1206;
+		font-size: 18px;
+}
+#block-system-navigation ul li ul li ul li a {
+		font-family: 'Arial';
+		font-size: 16px;
+		font-style: italic;
+}
+
+.menu .expanded .menu {display:block;}
+/*************************************/
+/* Achtergrond fades 						     */
+/*************************************/
+#left-bgfade {
+		position:absolute;
+    bottom:0;
+    width:270px;
+    height:100%;
+    background:url('img/vertical-fade.png');
+    z-index:0;
+}
+#right-bgfade {
+    position:absolute;
+    bottom:0;
+    width:270px;
+    height:100%;
+    background:url('img/vertical-fade.png') -270px 0;
+    z-index:0;
+}
+#left-bgfade{
+	left:0;
+}
+#right-bgfade{
+	right:0;
+}
+.region-sidebar-first #edit-submit {
+	position: relative;
+	top: 40px;
+	left: -85px;
+}
