@@ -1,0 +1,10 @@
+TODO:
+- navbarlinks op een juiste plaats opslaan (in database?) zodat we makkelijk 
+  nieuwe pagina's kunnen toevoegen + dat we makkelijk kunnen kiezen wie welke
+  tabs te zien krijgt.
+- andere kleuren vinden voor de site (paletton.com kan daarbij helpen)
+- accountsysteem opstellen (met eventueel verschillende clearance niveau's)
+- zo dynamisch mogelijk werken, ik denk dat het leuk is moesten we 
+  bijvoorbeeld bij contact al die gegevens uit de database halen ipv
+  ze te hardcoden in de html.
+- melk en brood systeem maken
