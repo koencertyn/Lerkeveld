@@ -15,8 +15,74 @@
 </div>
 
 <div class="row center">
-	<a class="waves-effect col s1 offset-s4 waves-light btn-large">Login</a>
-	<a class="waves-effect col s1 offset-s2 waves-light btn-large">Registreer</a>
+	<a class="waves-effect col s1 offset-s4 waves-light btn-large modal-trigger" href="#modal-login">Login</a>
+	<a class="waves-effect col s1 offset-s2 waves-light btn-large modal-trigger" href="#modal-registreer">Registreer</a>
+</div>
+
+
+<div id="modal-login" class="modal">
+  <div class="modal-content">
+    <h4>Login</h4>
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="gebruikersnaam" type="text" class="validate">
+            <label for="gebruikersnaam">Gebruikersnaam</label>
+          </div>
+		</div>
+		<div class"row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">vpn_key</i>
+            <input id="passwoord" type="password" class="validate">
+            <label for="passwoord">Wachtwoord</label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Login</a>
+  </div>
+</div>
+
+<div id="modal-registreer" class="modal">
+  <div class="modal-content">
+    <h4>Registreer</h4>
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="naam" type="text" class="validate">
+            <label for="naam">Naam (achternaam-voornaam)</label>
+          </div>
+		  <div class="input-field col s6">
+            <i class="material-icons prefix">email</i>
+			<input id="email" type="email" class="validate">
+			<label for="email" data-error="nope">E-mail</label>
+		  </div>
+		</div>
+		<div class"row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">vpn_key</i>
+            <input id="passwoord1" type="password" class="validate">
+            <label for="passwoord1">Wachtwoord</label>
+          </div>
+          <div class="input-field col s6">
+            <i class="material-icons prefix">vpn_key</i>
+            <input id="passwoord2" type="password" class="validate">
+            <label for="passwoord2">Herhaal wachtwoord</label>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Registreer</a>
+  </div>
 </div>
 
 {% endblock %}
