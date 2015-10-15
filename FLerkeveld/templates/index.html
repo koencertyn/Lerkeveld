@@ -1,17 +1,22 @@
 {% extends "layout.html" %}
 {% set active_page = "index" %}
 {% block body %}
-<h2 class="header center lerkie-red-text text-lighten-2">
+<h1 class="header center">
 	Welkom   
-</h2>
-	<div class="row center grey-text ">
-    <h5 class="header col s12 light">
+</h1>
+<div class="row center">
+    <p class="col s8 offset-s2 light">
         Welkom op Lerkeveld Underground, de site van, voor en door studenten op Lerkeveld.
 		Als lid van Lerkeveld geniet u van allerlei voordelen, deze kunt u vinden onder members.
 		Voor de bezoeker die geen lid is van deze exclusieve groep hebben we ook wat in de aanbieding:
-		u kunt namelijk ons exclusieve Lerkeveld lied beluisteren(op eigen risico) en wat meer lezen over de groep
+		u kunt namelijk ons exclusieve Lerkeveld lied beluisteren (op eigen risico) en wat meer lezen over de groep
 		waar Lerkeveld voor staat.
-    </h5>
+    </p>
+</div>
+
+<div class="row center">
+	<a class="waves-effect col s1 offset-s4 waves-light btn-large">Login</a>
+	<a class="waves-effect col s1 offset-s2 waves-light btn-large">Registreer</a>
 </div>
 
 {% endblock %}
