@@ -1,3 +1,4 @@
+{% set active_page = active_page|default('index') -%}
 {% include "base_head.html" with context %}
 {% block body %}{% endblock %}
 {% include "base_tail.html" with context %}
