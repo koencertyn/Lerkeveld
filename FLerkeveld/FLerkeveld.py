@@ -13,11 +13,11 @@ from sqlite3 import dbapi2 as sqlite3
 from flask import Flask, request, session, g, redirect, url_for, abort, \
      render_template, flash
 
-navbar_links = [("Home","/"),
-                ("Wie zijn we?","/wie"),
-                ("Lerkeveld Lied","/lied"),
-                ("Leden","/leden"),
-                ("Contact","/contact")]
+navbar_links = [("index","Home","/"),
+                ("wie","Wie zijn we?","/wie"),
+                ("lied","Lerkeveld Lied","/lied"),
+                ("leden","Leden","/leden"),
+                ("contact","Contact","/contact")]
 
 
 
@@ -79,7 +79,15 @@ def show_entries():
 @app.route('/wie')
 def wie_zijn_we():
     return render_template('wie.html',navbar_links=navbar_links)
-
+@app.route('/lied')
+def lied():
+    return render_template('lied.html',navbar_links=navbar_links)
+@app.route('/leden')
+def leden():
+    return render_template('leden.html',navbar_links=navbar_links)
+@app.route('/contact')
+def contact():
+    return render_template('contact.html',navbar_links=navbar_links)
 
 if __name__ == '__main__':
     app.run()
