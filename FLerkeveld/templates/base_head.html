@@ -6,7 +6,7 @@
   <title>Lerkeveld Underground</title>
 
   <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{{ url_for('static', filename="img/favicon.ico") }}" type="image/ico" rel="icon" media="screen,projection"/>
   <link href="{{ url_for('static', filename="css/materialize.css") }}" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="{{ url_for('static', filename="css/style.css") }}" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
@@ -14,20 +14,19 @@
 <body>
   <nav role="navigation">
     <div class="nav-wrapper container">
-	  <a id="logo-container" href="#" class="brand-logo">
-		  {# <img class="responsive-img" src="static/img/lerkeveld-wit.png"> #}
-	  </a>
+      <a id="logo-container" href="#" class="brand-logo">
+        {# <img class="responsive-img" src="static/img/lerkeveld-wit.png"> #}
+      </a>
       <ul class="right hide-on-med-and-down">
-	  {% for id, title, link in navbar_links %}
-	  	<li {% if id == active_page %} class="active"{% endif %}><a href="{{link}}">{{title}}</a></li>
-	  {% endfor %}
+        {% for id, title, link in navbar_links %}
+        <li {% if id == active_page %} class="active"{% endif %}><a href="{{link}}">{{title}}</a></li>
+        {% endfor %}
       </ul>
-
       <ul id="nav-mobile" class="side-nav">
-	  {% for id, title, link in navbar_links %}
-	    <li><a href="{{link}}">{{title}}</a></li>
-	  {% endfor %}
-	  </ul>
+      {% for id, title, link in navbar_links %}
+        <li><a href="{{link}}">{{title}}</a></li>
+      {% endfor %}
+      </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
