@@ -14,9 +14,8 @@ from flask import Flask, request, session, g, redirect, url_for, abort, \
      render_template, flash
 
 navbar_links = [("index","Home","/"),
-                ("wie","Wie zijn we?","/wie"),
+                ("wie","Over ons","/wie"),
                 ("lied","Lerkeveld Lied","/lied"),
-                ("leden","Leden","/leden"),
                 ("contact","Contact","/contact")]
 
 
