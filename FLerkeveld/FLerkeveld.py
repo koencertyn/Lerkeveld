@@ -14,7 +14,7 @@ from flask import Flask, request, session, g, redirect, url_for, abort, \
      render_template, flash
 
 navbar_links = [("index","Home","/"),
-                ("wie","Over ons","/wie"),
+                ("over_ons","Over ons","/over_ons"),
                 ("lied","Lerkeveld Lied","/lied"),
                 ("contact","Contact","/contact")]
 
@@ -75,9 +75,9 @@ def close_db(error):
 @app.route('/')
 def show_entries():
     return render_template('index.html',navbar_links=navbar_links)
-@app.route('/wie')
+@app.route('/over_ons')
 def wie_zijn_we():
-    return render_template('wie.html',navbar_links=navbar_links)
+    return render_template('over_ons.html',navbar_links=navbar_links)
 @app.route('/lied')
 def lied():
     return render_template('lied.html',navbar_links=navbar_links)
@@ -87,6 +87,9 @@ def leden():
 @app.route('/contact')
 def contact():
     return render_template('contact.html',navbar_links=navbar_links)
+@app.route('/praesidium')
+def praesidium():
+    return render_template('praesidium.html',navbar_links=navbar_links)
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0")
