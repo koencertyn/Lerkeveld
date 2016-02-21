@@ -1,4 +1,5 @@
-  <footer class="page-footer">
+{% macro tail() %}  
+<footer class="page-footer">
     <div class="row center">
       <div class="col s6 offset-s3 m2 offset-m5">
         <img class="responsive-img" src="{{ url_for('static', filename="img/LerkeveldLogo.png") }}">
@@ -8,9 +9,10 @@
 
 
   <!--  Scripts-->
-  <script src="static/js/jquery-2.1.4.js"></script>
+  <script src="static/js/bin/jquery-2.1.4.js"></script>
   <script src="static/js/bin/materialize.js"></script>
   <script src="static/js/init.js"></script>
 
   </body>
 </html>
+{% endmacro %}

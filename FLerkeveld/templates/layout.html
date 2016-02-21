@@ -1,7 +1,13 @@
 {% set active_page = active_page|default('index') -%}
-{% include "base_head.html" with context %}
+{% from "base_head.html" import head with context %}
+{% from "base_tail.html" import tail with context %}
+{% from "modals.html" import login_modal with context %}
+
+{{ head() }}
 <main>
 {% block body %}{% endblock %}
+{% if current_user.is_anonymous %}
+{{ login_modal() }}
+{% endif %}
 </main>
-{% include "base_tail.html" with context %}
-
+{{ tail() }}

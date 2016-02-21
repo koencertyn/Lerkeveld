@@ -1,24 +1,4 @@
-{% extends "layout.html" %}
-{% set active_page = "index" %}
-{% block body %}
-<h1 class="header center">
-  Welkom   
-</h1>
-<div class="row center">
-  <p class="col s8 offset-s2 light">
-  Welkom op Lerkeveld Underground, de site van, voor en door studenten op Lerkeveld.
-  Als lid van Lerkeveld geniet u van allerlei voordelen, deze kunt u vinden onder members.
-  Voor de bezoeker die geen lid is van deze exclusieve groep hebben we ook wat in de aanbieding:
-  u kunt namelijk ons exclusieve Lerkeveld lied beluisteren (op eigen risico) en wat meer lezen over de groep
-  waar Lerkeveld voor staat.
-  </p>
-</div>
-
-<div class="row center">
-  <a class="waves-effect col s6 m1 offset-m4 waves-light btn-large modal-trigger" href="#modal-login">Login</a>
-  <a class="waves-effect col s6 m1 offset-m2 waves-light btn-large modal-trigger" href="#modal-registreer">Registreer</a>
-</div>
-
+{% macro modal_register() %}
 <div id="modal-registreer" class="modal">
   <form class="col s12">
     <div class="modal-content">
@@ -57,8 +37,9 @@
   </form>
 </div>
 
-{% endblock %}
-{% block login_modal %}
+{% endmacro %}
+
+{% macro login_modal() %}
 <div id="modal-login" class="modal">
   <form class="col s12" action="login" name="loginform" method="POST">
     <div class="modal-content">
@@ -85,5 +66,5 @@
     </div>
   </form>
 </div>
-{% endblock %}
+{% endmacro %}
 
