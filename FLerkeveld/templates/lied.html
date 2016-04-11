@@ -4,8 +4,8 @@
 <div class="row">
 <div class="col s8 offset-s2 light">
        <h1>Lerkeveld lied</h1>
-       <p>Lerkeveld heeft zijn eigen lied. Je vindt de noten <a href="lied/Lerkeveld_melodie_0.pdf">hier</a>. 
-          Een ingezongen versie kan je <a href="lied/Lerkeveldlied.mp3">hier</a> vinden.<br>
+       <p>Lerkeveld heeft zijn eigen lied. Je vindt de noten <a href="{{ url_for('static', filename="song/Lerkeveld_melodie_0.pdf") }}">hier</a>. 
+          Een ingezongen versie kan je <a href="{{url_for('static', filename="song/Lerkeveldlied.mp3") }}">hier</a> vinden.<br>
           En het belangrijkste, de tekst gaat als volgt:</p>
 		<div  class="card col s12 m4 grey lighten-2">
 		<div class = "card-content">
@@ -56,6 +56,7 @@
        </p>
 	   </div>
 	   </div>
+       <!--
 	   <div class="col s8">
 	   <br>
 	   <br>
@@ -67,6 +68,7 @@
 		   <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0;autohide=1" frameborder="0" allowfullscreen></iframe>
        </div>
 	   </div>
+       -->
 		
 </div>
 </div>
