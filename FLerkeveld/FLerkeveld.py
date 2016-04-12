@@ -90,6 +90,27 @@ def contact():
 @app.route('/praesidium')
 def praesidium():
     return render_template('praesidium.html',navbar_links=navbar_links)
+@app.route('/oudPraesidia')
+def oudPraesidia():
+    return render_template('oudPraesidia.html',navbar_links=navbar_links)
+@app.route('/praesidium2008')
+def praesidium2008():
+    return render_template('praesidium2008.html',navbar_links=navbar_links)
+@app.route('/praesidium2009')
+def praesidium2009():
+    return render_template('praesidium2009.html',navbar_links=navbar_links)
+@app.route('/praesidium2010')
+def praesidium2010():
+    return render_template('praesidium2010.html',navbar_links=navbar_links)
+@app.route('/praesidium2012')
+def praesidium2012():
+    return render_template('praesidium2012.html',navbar_links=navbar_links)
+@app.route('/praesidium2013')
+def praesidium2013():
+    return render_template('praesidium2013.html',navbar_links=navbar_links)
+@app.route('/praesidium2014')
+def praesidium2014():
+    return render_template('praesidium2014.html',navbar_links=navbar_links)
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0")
