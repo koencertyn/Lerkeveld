@@ -12,6 +12,13 @@
 </head>
 
 <body>
+  <ul id="dropdown1" class="dropdown-content black">
+    <li><a href="over_ons">Over ons</a></li>
+    <li class="divider"></li>
+    <li><a href="praesidium">Praesidium</a></li>
+    <li class="divider"></li>
+    <li><a href="oudPraesidia">Oud praesidia</a></li>
+  </ul>
   <div class="navbar-fixed">
   <nav role="navigation">
     <div class="nav-wrapper container">
@@ -20,7 +27,15 @@
       </a>
       <ul class="right hide-on-med-and-down">
         {% for id, title, link in navbar_links %}
-        <li {% if id == active_page %} class="active"{% endif %}><a href="{{link}}">{{title}}</a></li>
+        <!--<li {% if id == active_page %} class="active"{% endif %}>
+            <a {% if id == "over_ons" %} class="dropdown-button"{% endif %} href="{{link}}">{{title}}</a>
+        </li>
+        -->
+        <li {% if id == active_page %} class="active"{% endif %}>
+            <a {% if id == "over_ons" %} class="dropdown-button" href="#!" data-activates="dropdown1">Over ons<i class="material-icons right">arrow_drop_down</i></a>
+            {% else %}href="{{link}}">{{title}}</a>
+            {% endif %}
+        </li>
         {% endfor %}
       </ul>
       <ul id="nav-mobile" class="side-nav">

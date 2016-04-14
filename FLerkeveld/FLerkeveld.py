@@ -76,7 +76,7 @@ def close_db(error):
 def show_entries():
     return render_template('index.html',navbar_links=navbar_links)
 @app.route('/over_ons')
-def wie_zijn_we():
+def over_ons():
     return render_template('over_ons.html',navbar_links=navbar_links)
 @app.route('/lied')
 def lied():
