@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+{% set active_page = "lied" %}
+{% block body %}
+<div class="row">
+<div class="col s8 offset-s2 light">
+       <h1>Lerkeveld lied</h1>
+       <p>Lerkeveld heeft zijn eigen lied. Je vindt de noten <a href="{{ url_for('static', filename="song/Lerkeveld_melodie_0.pdf") }}" target="_blank">hier</a>. 
+          Een ingezongen versie kan je <a href="{{url_for('static', filename="song/Lerkeveldlied.mp3") }}" target="_blank">hier</a> vinden.<br>
+          En het belangrijkste, de tekst gaat als volgt:</p>
+		<div  class="card col s12 m4 grey lighten-2">
+		<div class = "card-content">
+	   <p>
+       <em>
+       In het kalme Heverlee,<br>
+	   Rusten wij in peis en vree,<br>
+       Maar als het tijd is voor plezier,<br>
+       Dan zijn wij hier (3x).
+	   <br>
+	   <br>
+       </em>
+       </p>
+       <p>
+       <strong>Refrein:</strong><br>
+       <em>
+       Lerkeveld (4x)<br>
+       Waar is het fijn<br>
+       Student te zijn?<br>
+       Op Lerkeveld (3x)<br>
+	   <br>
+       </em>
+       </p>
+       <p>
+       <em>
+       Een module hier of daar,<br>
+       Stopt ons nooit als boemelaar,<br>
+       Want ruiken wij het patersbier,<br>
+       Dan zijn wij hier (3x).<br>
+	   <br>
+       </em>
+       </p>
+       <p>
+       <strong>Refrein</strong>
+       </p>
+	   <br>
+       <p>
+       <em>
+       Vrienden, heug u deze stonde,<br>
+       Lerkeveld is in de ronde,<br>
+       Noord en Zuid tesaam op zwier,<br>
+       Ja, wij zijn hier (3x)<br>
+	   <br>
+       </em>
+       </p>
+       <p>
+       <strong>Refrein</strong>
+       </p>
+	   </div>
+	   </div>
+       <!--
+	   <div class="col s8">
+	   <br>
+	   <br>
+	   <br>
+	   <br>
+	   <br>
+	   <br>
+	   <div class="video-container no-controls">
+		   <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0;autohide=1" frameborder="0" allowfullscreen></iframe>
+       </div>
+	   </div>
+       -->
+		
+</div>
+</div>
+{% endblock %}

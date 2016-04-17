@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+{% set active_page = "index" %}
+{% block body %}
+<h1 class="header center">
+	Welkom   
+</h1>
+<div class="row center">
+    <p class="col s8 offset-s2 light">
+        Welkom op Lerkeveld Underground, de site van, voor en door studenten op Lerkeveld.
+		Als lid van Lerkeveld geniet u van allerlei voordelen, deze kunt u vinden onder members.
+		Voor de bezoeker die geen lid is van deze exclusieve groep hebben we ook wat in de aanbieding:
+		u kunt namelijk ons exclusieve Lerkeveld lied beluisteren (op eigen risico) en wat meer lezen over de groep
+		waar Lerkeveld voor staat.
+    </p>
+</div>
+
+<div class="row center">
+	<a class="waves-effect col s6 m1 offset-m5b waves-light btn-large modal-trigger" href="#modal-login">Login</a>
+	<!--<a class="waves-effect col s6 m1 offset-m2 waves-light btn-large modal-trigger" href="#modal-registreer">Registreer</a>-->
+</div>
+
+<div id="modal-login" class="modal">
+  <div class="modal-content">
+    <h4>Login</h4>
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="gebruikersnaam" type="text" class="validate">
+            <label for="gebruikersnaam">Gebruikersnaam</label>
+          </div>
+		</div>
+		<div class"row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">vpn_key</i>
+            <input id="passwoord" type="password" class="validate">
+            <label for="passwoord">Wachtwoord</label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat 
+		onclick="Materialize.toast('Fancy "you are now logged in"', 4000)"">Login</a>
+  </div>
+</div>
+
+<!--
+<div id="modal-registreer" class="modal">
+  <div class="modal-content">
+    <h4>Registreer</h4>
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="naam" type="text" class="validate">
+            <label for="naam">Naam (achternaam-voornaam)</label>
+          </div>
+		  <div class="input-field col s6">
+            <i class="material-icons prefix">email</i>
+			<input id="email" type="email" class="validate">
+			<label for="email" data-error="nope">E-mail</label>
+		  </div>
+		</div>
+		<div class"row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">vpn_key</i>
+            <input id="passwoord1" type="password" class="validate">
+            <label for="passwoord1">Wachtwoord</label>
+          </div>
+          <div class="input-field col s6">
+            <i class="material-icons prefix">vpn_key</i>
+            <input id="passwoord2" type="password" class="validate">
+            <label for="passwoord2">Herhaal wachtwoord</label>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Registreer</a>
+  </div>
+</div>
+-->
+{% endblock %}
